@@ -1,33 +1,26 @@
-# Diagrama UML - Codigo C++
-
-## 1. Arquivos analisados
-
-- `src_cpp/main.cpp`
-- `src_cpp/equipamento.hpp`
-- `src_cpp/equipamento.cpp`
-- `src_cpp/sensor_temperatura.hpp`
-- `src_cpp/sensor_temperatura.cpp`
-
-## 2. Link do Mermaid Live
-
-Cole aqui o link do diagrama validado.
-
-## 3. Diagrama final em Mermaid
+# # Diagrama UML - C++
 
 ```mermaid
 classDiagram
-    %% Substitua este bloco pelo seu diagrama final.
-```
+    class Equipamento {
+        -tag : string
+        -descricao : string
+        -ativo : bool
+        +Equipamento(tagEquipamento : string, descricaoEquipamento : string, ativoInicial : bool)
+        +ligar() : void
+        +desligar() : void
+        +getTag() : string
+        +estaAtivo() : bool
+        +exibirResumo() : void
+    }
 
-## 4. Justificativa tecnica
+    class SensorTemperatura {
+        -valorAtual : double
+        +SensorTemperatura(tagSensor : string, descricaoSensor : string, ativoInicial : bool, valorInicial : double)
+        +atualizarLeitura(novoValor : double) : void
+        +getValorAtual() : double
+        +exibirResumo() : void
+    }
 
-Explique, em frases curtas:
+    Equipamento <|-- SensorTemperatura
 
-- quais classes foram identificadas;
-- como a heranca aparece no codigo;
-- quais operacoes merecem destaque no diagrama;
-- por que seu UML representa corretamente o codigo em `C++`.
-
-## 5. Evidencias
-
-Cole aqui a saida do terminal, prints ou observacoes da execucao do codigo em `C++`.
