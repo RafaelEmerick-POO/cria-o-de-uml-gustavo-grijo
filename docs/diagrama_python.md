@@ -23,3 +23,12 @@ classDiagram
     }
 
     Equipamento <|-- SensorTemperatura
+
+
+Justificativa
+
+A classe SensorTemperatura herda de Equipamento, identificado pelo uso de class SensorTemperatura(Equipamento).
+Os atributos com "_" indicam encapsulamento por convenção.
+O método tag foi modelado como atributo devido ao uso de @property.
+O método exibir_resumo() é sobrescrito, caracterizando polimorfismo.
+O uso de super().init() confirma a herança.
